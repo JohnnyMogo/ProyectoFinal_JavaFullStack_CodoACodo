@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAC-MOVIES - Admin</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/estilos.css">
+
+  <!--favicon -->
+  <link rel="icon" href="./assets/claqueta.png" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Barra de navegación -->
+  <header>
+    <nav>
+      <a class="inicio" href="#">
+        <img src="./assets/cinta.png" alt="">
+        <span>CAC-Movies Admin</span>
+      </a>
+
+      <ul class="listaNav">
+        <li class="botonesNav">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li class="botonesNav">
+          <a href="admin.html">Administrador Peliculas</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Administrador -->
+    <section class="admin-section" data-aos="fade-up" data-aos-duration="2000" style="margin-top: 100px;">
+      <h2>Administrador de Películas</h2>
+
+      <h5 style="margin-left: 120px;">Para ingresar una película complete el siguiente formulario: </h5>
+      <!-- Formulario para agregar películas -->
+      <form id="formNuevaPelicula" action="" method="post" enctype="multipart/form-data"
+        class="formulario">
+        
+        <div class="col-md-3 ">
+          <label for="titulo">Titulo</label>
+          <input class="form-control" type="text" name="titulo" id="titulo">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-2 ">
+          <label for="genero">Genero</label>
+          <input class="form-control" type="text" name="genero" id="genero">
+        </div>
+
+        <div class="col-md-1"></div>
+
+        <div class="col-md-2">
+          <label for="duracion">Duración</label>
+          <input class="form-control" type="text" name="duracion" id="duracion">
+        </div>
+
+        <div class="col-md-9">
+          <label for="imagen">Imagen</label>
+          <input class="form-control" type="file" name="imagen" id="imagen">
+        </div>
+        <div class="col-12" style="margin-top: 20px;">
+          <input class="align-self-center btn btn-success" type="submit" value="Agregar Pelicula">
+        </div>
+      </form>
+    </section>
+
+    </section>
+
+    <section class="container mt-5 mb-5 overflow-auto">
+      <h2>Listado de Peliculas</h2>
+      <table class="table table-striped" id="tablePeliculas">
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Duracion</th>
+            <th>Genero</th>
+            <th>Imagen</th>
+          </tr>
+        </thead>
+        <tbody id="bodyTablePeliculas" class="tabla">
+
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="listaFooter">
+      <li class="btnFooter">
+        <a href="./pages/api.html">API</a>
+      </li>
+      <li class="btnFooter">
+        <a href="">Preguntas frecuentes</a>
+      </li>
+      <li class="btnFooter">
+        <a href="">Ayuda</a>
+      </li>
+      <li class="btnFooter">
+        <a href="admin.html">Administrador Peliculas</a>
+      </li>
+    </ul>
+
+    <div class="flecha">
+      <a href="">
+        <img src="./assets/img/flecha-hacia-arriba.png" alt="">
+      </a>
+    </div>
+  </footer>
+
+  <!-- js boostrap -->
+  <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
+
+  <!-- AOS -->
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- JavaScript para mostrar/agregar películas -->
+
+  <script src="./javascript/get_peliculas.js"></script>
+  <script src="./javascript/post_peliculas.js"></script>
+
+</body>
+
+</html>
